@@ -26,6 +26,6 @@ import { LayoutComponent } from "./layout/layout.component";
     MatSidenavModule,
     HeaderModule,
   ],
-  exports: [],
+  exports: [HeaderModule, SidebarComponent, LayoutComponent],
 })
 export class SharedModule {}
