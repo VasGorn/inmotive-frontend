@@ -16,7 +16,7 @@ import { SelectProjectComponent } from "./components/select-project/select-proje
 
 @NgModule({
   declarations: [HeaderComponent, SelectProjectComponent],
-  exports: [],
+  exports: [HeaderComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
