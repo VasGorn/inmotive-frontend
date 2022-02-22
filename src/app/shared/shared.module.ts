@@ -8,6 +8,7 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatSelectModule } from "@angular/material/select";
 import { FormsModule } from "@angular/forms";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { HeaderModule } from "./header/header.module";
 
 @NgModule({
   declarations: [],
@@ -21,6 +22,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
     MatSelectModule,
     FormsModule,
     MatSidenavModule,
+    HeaderModule,
   ],
   exports: [],
 })
