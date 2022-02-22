@@ -9,6 +9,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
     ToastrModule.forRoot(),
     MatCardModule,
     MatButtonModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
