@@ -11,8 +11,11 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatSelectModule } from "@angular/material/select";
 import { MatOptionModule } from "@angular/material/core";
 
+import { HeaderComponent } from "./containers/header/header.component";
+import { SelectProjectComponent } from "./components/select-project/select-project.component";
+
 @NgModule({
-  declarations: [],
+  declarations: [HeaderComponent, SelectProjectComponent],
   exports: [],
   imports: [
     CommonModule,
