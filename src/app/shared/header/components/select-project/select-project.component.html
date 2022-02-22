@@ -1,0 +1,10 @@
+<form class="form-project-select" [formGroup]="form">
+  <mat-form-field appearance="fill" style="height: 50px">
+    <mat-label>Project</mat-label>
+    <mat-select formControlName="project" (selectionChange)="onChange($event)">
+      <mat-option *ngFor="let project of projects" [value]="project.id">
+        {{ project.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
