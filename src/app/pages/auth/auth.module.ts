@@ -14,6 +14,7 @@ import { SignFormComponent } from "./components/sign-form/sign-form.component";
 import { AuthRoutingModule } from "./auth-routing.module";
 import { AuthService } from "./services/auth.service";
 import { AuthGuard } from "./guards/auth.guard";
+import { NotificationModule } from "../notification/notification.module";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AuthGuard } from "./guards/auth.guard";
     HttpClientModule,
     SharedModule,
     AuthRoutingModule,
+    NotificationModule,
   ],
   providers: [AuthService, AuthGuard],
 })
