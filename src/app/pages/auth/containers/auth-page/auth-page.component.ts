@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { AuthService } from "../../services";
 import { routes } from "../../../../consts";
 import { LoginRequest } from "../../models/login-request";
-import { NotificationService } from "src/app/pages/notification/notification.service";
+import { NotificationService } from "src/app/pages/notification/services/notification.service";
 import { HttpErrorResponse } from "@angular/common/http";
 import { throwError } from "rxjs";
 import { SignupRequest } from "../../models/signup-request";
