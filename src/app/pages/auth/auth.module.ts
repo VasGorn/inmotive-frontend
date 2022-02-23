@@ -12,6 +12,8 @@ import { YearPipe } from "./pipes/year.pipe";
 import { LoginFormComponent } from "./components/login-form/login-form.component";
 import { SignFormComponent } from "./components/sign-form/sign-form.component";
 import { AuthRoutingModule } from "./auth-routing.module";
+import { AuthService } from "./services/auth.service";
+import { AuthGuard } from "./guards/auth.guard";
 
 @NgModule({
   declarations: [
@@ -31,6 +33,6 @@ import { AuthRoutingModule } from "./auth-routing.module";
     SharedModule,
     AuthRoutingModule,
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
 })
 export class AuthModule {}
