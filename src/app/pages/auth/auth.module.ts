@@ -7,9 +7,18 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
 import { SharedModule } from "src/app/shared/shared.module";
+import { AuthPageComponent } from "./containers/auth-page/auth-page.component";
+import { YearPipe } from "./pipes/year.pipe";
+import { LoginFormComponent } from "./components/login-form/login-form.component";
+import { SignFormComponent } from "./components/sign-form/sign-form.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AuthPageComponent,
+    YearPipe,
+    LoginFormComponent,
+    SignFormComponent,
+  ],
   imports: [
     CommonModule,
     MatTabsModule,
