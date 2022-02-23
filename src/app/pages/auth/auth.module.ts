@@ -11,6 +11,7 @@ import { AuthPageComponent } from "./containers/auth-page/auth-page.component";
 import { YearPipe } from "./pipes/year.pipe";
 import { LoginFormComponent } from "./components/login-form/login-form.component";
 import { SignFormComponent } from "./components/sign-form/sign-form.component";
+import { AuthRoutingModule } from "./auth-routing.module";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SignFormComponent } from "./components/sign-form/sign-form.component";
     FormsModule,
     HttpClientModule,
     SharedModule,
+    AuthRoutingModule,
   ],
   providers: [],
 })
