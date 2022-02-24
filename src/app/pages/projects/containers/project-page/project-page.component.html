@@ -1,0 +1,38 @@
+<app-layout>
+  <mat-toolbar class="page-header" role="heading">
+    <h1>Projects</h1>
+  </mat-toolbar>
+
+  <mat-card-content class="typography-content">
+    <div class="typography-content__wrapper">
+      <mat-card class="typography-content__item-wrapper">
+        <mat-card-title>
+          <p>Create new project</p>
+        </mat-card-title>
+        <div class="typography-content__headings">
+          <app-project-form
+            [project]="selectedProject"
+            (saveProjectEvent)="saveProject($event)"
+          ></app-project-form>
+        </div>
+      </mat-card>
+    </div>
+  </mat-card-content>
+
+  <mat-card-content class="typography-content">
+    <div class="typography-content__wrapper">
+      <mat-card class="typography-content__item-wrapper">
+        <mat-card-title>
+          <p>All projects</p>
+        </mat-card-title>
+        <div class="typography-content__headings">
+          <app-project-table
+            [projects]="projects"
+            (selectProjectEvent)="selectProject($event)"
+            (deleteProjectEvent)="deleteProject($event)"
+          ></app-project-table>
+        </div>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</app-layout>
