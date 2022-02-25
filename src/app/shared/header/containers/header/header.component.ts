@@ -11,11 +11,10 @@ import { Router } from "@angular/router";
 import { AuthService } from "../../../../pages/auth/services";
 import { routes } from "../../../../consts";
 import { HttpErrorResponse } from "@angular/common/http";
-import { Observable, Subscription, throwError } from "rxjs";
-import { NotificationService } from "src/app/pages/notification/notification.service";
+import { Subscription, throwError } from "rxjs";
+import { NotificationService } from "src/app/pages/notification/services/notification.service";
 import { ProjectService } from "src/app/pages/projects/services/project.service";
 import { Project } from "src/app/pages/projects/models/project";
-import { map, take } from "rxjs/operators";
 
 @Component({
   selector: "app-header",
