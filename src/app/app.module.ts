@@ -14,9 +14,10 @@ import { TokenInterceptor } from "./token.interceptor";
 import { AuthModule } from "./pages/auth/auth.module";
 import { ProjectsModule } from "./pages/projects/projects.module";
 import { ProjectService } from "./pages/projects/services/project.service";
+import { NotFoundComponent } from "./pages/not-found/not-found.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
