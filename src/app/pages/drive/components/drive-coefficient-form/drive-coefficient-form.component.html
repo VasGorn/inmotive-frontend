@@ -1,0 +1,50 @@
+<form class="form" [formGroup]="form" style="margin: 5px">
+  <mat-grid-list
+    [cols]="breakpointColumn"
+    rowHeight="75px"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Rectifier circuit, r.u.</mat-label>
+        <input
+          matInput
+          placeholder="Rectifier"
+          type="number"
+          formControlName="coefRectifier"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Inverter circuit, r.u.</mat-label>
+        <input
+          matInput
+          placeholder="Inverter"
+          type="number"
+          formControlName="coefInverter"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>DC link, r.u.</mat-label>
+        <input
+          matInput
+          placeholder="DC"
+          type="number"
+          formControlName="coefDC"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div>
+    <button mat-raised-button color="primary" type="submit">Approve</button>
+  </div>
+</form>
