@@ -1,0 +1,81 @@
+<form class="form" [formGroup]="form" style="margin: 5px">
+  <mat-grid-list
+    [cols]="breakpointColumn"
+    rowHeight="75px"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Initial frequency value</mat-label>
+        <input
+          matInput
+          placeholder="Initial frequency"
+          type="number"
+          formControlName="initialFrequency"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Frequency increment</mat-label>
+        <input
+          matInput
+          placeholder="Frequency increment"
+          type="number"
+          formControlName="incrementFrequency"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Number of graphs</mat-label>
+        <input
+          matInput
+          placeholder="Number of graphs"
+          type="number"
+          formControlName="numGraphs"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <fieldset>
+    <legend>Enter the frequency range</legend>
+    <mat-form-field
+      appearance="outline"
+      style="width: 45%; padding-right: 10px; padding-left: 10px"
+    >
+      <mat-label>From</mat-label>
+      <input
+        matInput
+        placeholder="from"
+        type="number"
+        formControlName="frequencyForm"
+        step="0.1"
+      />
+    </mat-form-field>
+
+    <mat-form-field
+      appearance="outline"
+      style="width: 45%; padding-right: 10px; padding-left: 10px"
+    >
+      <mat-label>To</mat-label>
+      <input
+        matInput
+        placeholder="to"
+        type="number"
+        formControlName="frequencyTo"
+        step="0.1"
+      />
+    </mat-form-field>
+  </fieldset>
+
+  <div style="margin-top: 10px">
+    <button mat-raised-button color="primary" type="submit">Approve</button>
+  </div>
+</form>
