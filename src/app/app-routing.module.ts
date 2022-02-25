@@ -11,6 +11,11 @@ const routes: Routes = [
       import("./pages/auth/auth.module").then((m) => m.AuthModule),
   },
   {
+    path: "",
+    pathMatch: "full",
+    redirectTo: "projects",
+  },
+  {
     path: "404",
     component: NotFoundComponent,
   },
