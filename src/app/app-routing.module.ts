@@ -15,16 +15,16 @@ const routes: Routes = [
     component: NotFoundComponent,
   },
   {
-    path: "**",
-    redirectTo: "404",
-  },
-  {
     path: "projects",
     pathMatch: "full",
     canActivate: [AuthGuard],
     component: ProjectPageComponent,
     loadChildren: () =>
       import("./pages/projects/projects.module").then((m) => m.ProjectsModule),
+  },
+  {
+    path: "**",
+    redirectTo: "404",
   },
 ];
 
