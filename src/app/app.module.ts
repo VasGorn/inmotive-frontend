@@ -12,6 +12,7 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { SharedModule } from "./shared/shared.module";
 import { TokenInterceptor } from "./token.interceptor";
 import { AuthModule } from "./pages/auth/auth.module";
+import { ProjectsModule } from "./pages/projects/projects.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { AuthModule } from "./pages/auth/auth.module";
     MatButtonModule,
     SharedModule,
     AuthModule,
+    ProjectsModule,
   ],
   providers: [
     {
