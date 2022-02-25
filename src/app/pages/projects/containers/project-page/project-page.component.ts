@@ -1,8 +1,7 @@
 import { HttpErrorResponse } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
 import { Observable, throwError } from "rxjs";
-import { timeout } from "rxjs/operators";
-import { NotificationService } from "src/app/pages/notification/notification.service";
+import { NotificationService } from "src/app/pages/notification/services/notification.service";
 import { ErrorResponse } from "src/app/shared/types/error-response.interface";
 import { Project } from "../../models/project";
 import { ProjectService } from "../../services/project.service";
