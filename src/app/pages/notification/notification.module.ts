@@ -6,9 +6,16 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 
 import { SharedModule } from "../../shared/shared.module";
+import { SuccessToastComponent } from "./components/success-toast/success-toast.component";
+import { ErrorToastrComponent } from "./components/error-toastr/error-toastr.component";
+import { InfoToastrComponent } from "./components/info-toastr/info-toastr.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SuccessToastComponent,
+    ErrorToastrComponent,
+    InfoToastrComponent,
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
