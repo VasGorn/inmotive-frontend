@@ -13,6 +13,7 @@ import { SharedModule } from "./shared/shared.module";
 import { TokenInterceptor } from "./token.interceptor";
 import { AuthModule } from "./pages/auth/auth.module";
 import { ProjectsModule } from "./pages/projects/projects.module";
+import { ProjectService } from "./pages/projects/services/project.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { ProjectsModule } from "./pages/projects/projects.module";
     ProjectsModule,
   ],
   providers: [
+    ProjectService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
