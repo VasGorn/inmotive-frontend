@@ -1,0 +1,89 @@
+<form class="form" [formGroup]="form" style="margin: 5px">
+  <mat-grid-list
+    [cols]="breakpointColumn"
+    rowHeight="75px"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Rated power, kW</mat-label>
+        <input
+          matInput
+          placeholder="Power"
+          type="number"
+          formControlName="ratedPower"
+          step="100"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Efficiency, r.u.</mat-label>
+        <input
+          matInput
+          placeholder="Efficiency"
+          type="number"
+          formControlName="efficiency"
+          step="0.01"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Max output voltage, V</mat-label>
+        <input
+          matInput
+          placeholder="Max output voltage"
+          type="number"
+          formControlName="maxVoltage"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Rated frequency, Hz</mat-label>
+        <input
+          matInput
+          placeholder="Rated frequency"
+          type="number"
+          formControlName="ratedFrequency"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Switching frequency, kHz</mat-label>
+        <input
+          matInput
+          placeholder="Switching frequency"
+          type="number"
+          formControlName="switchFrequency"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Frequency rate, Hz/s</mat-label>
+        <input
+          matInput
+          placeholder="switching frequency"
+          type="number"
+          formControlName="frequencyRate"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div>
+    <button mat-raised-button color="primary" type="submit">Approve</button>
+  </div>
+</form>
