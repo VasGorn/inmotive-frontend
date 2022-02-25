@@ -9,6 +9,7 @@ import { SharedModule } from "../../shared/shared.module";
 import { SuccessToastComponent } from "./components/success-toast/success-toast.component";
 import { ErrorToastrComponent } from "./components/error-toastr/error-toastr.component";
 import { InfoToastrComponent } from "./components/info-toastr/info-toastr.component";
+import { NotificationService } from "./services/notification.service";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,6 @@ import { InfoToastrComponent } from "./components/info-toastr/info-toastr.compon
     MatIconModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [NotificationService],
 })
 export class NotificationModule {}
