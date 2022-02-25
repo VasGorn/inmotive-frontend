@@ -2,12 +2,21 @@ import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { AuthGuard } from "./pages/auth/guards/auth.guard";
 import { ProjectPageComponent } from "./pages/projects/containers/project-page/project-page.component";
+import { NotFoundComponent } from "./pages/not-found/not-found.component";
 
 const routes: Routes = [
   {
     path: "login",
     loadChildren: () =>
       import("./pages/auth/auth.module").then((m) => m.AuthModule),
+  },
+  {
+    path: "404",
+    component: NotFoundComponent,
+  },
+  {
+    path: "**",
+    redirectTo: "404",
   },
   {
     path: "projects",
