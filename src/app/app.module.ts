@@ -15,6 +15,7 @@ import { AuthModule } from "./pages/auth/auth.module";
 import { ProjectsModule } from "./pages/projects/projects.module";
 import { ProjectService } from "./pages/projects/services/project.service";
 import { NotFoundComponent } from "./pages/not-found/not-found.component";
+import { DriveModule } from "./pages/drive/drive.module";
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
@@ -29,6 +30,7 @@ import { NotFoundComponent } from "./pages/not-found/not-found.component";
     SharedModule,
     AuthModule,
     ProjectsModule,
+    DriveModule,
   ],
   providers: [
     ProjectService,
