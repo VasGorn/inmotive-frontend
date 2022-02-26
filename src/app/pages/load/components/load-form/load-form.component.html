@@ -1,0 +1,45 @@
+<form
+  class="form"
+  [formGroup]="form"
+  (ngSubmit)="acceptLoad()"
+  style="margin: 10px"
+>
+  <mat-grid-list
+    [cols]="breakpointColumn"
+    rowHeight="80px"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Type of mechanical load</mat-label>
+        <mat-select formControlName="loadType">
+          <mat-option value="1"> Constant torque </mat-option>
+          <mat-option value="2">
+            Torque proportional to square of the speed
+          </mat-option>
+          <mat-option value="3">
+            Torque inversely proportional to speed
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Torque, Nm</mat-label>
+        <input
+          matInput
+          placeholder="Torque"
+          type="number"
+          formControlName="torque"
+          (keyup)="torqueChanged($event)"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div>
+    <button mat-raised-button color="primary" type="submit">Accept</button>
+  </div>
+</form>
