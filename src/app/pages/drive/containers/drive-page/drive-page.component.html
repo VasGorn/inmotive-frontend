@@ -1,0 +1,62 @@
+<app-layout>
+  <mat-toolbar class="page-header" role="heading">
+    <h1>Drive</h1>
+  </mat-toolbar>
+
+  <mat-card-content>
+    <div class="charts-content">
+      <div class="charts-content__charts-wrapper">
+        <mat-card class="charts-content__chart-item">
+          <mat-card-title>
+            <p>Nominal data of inverter</p>
+          </mat-card-title>
+          <app-drive-nominal-form></app-drive-nominal-form>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="charts-content">
+      <div class="charts-content__charts-wrapper">
+        <mat-card class="charts-content__chart-item">
+          <mat-card-title>
+            <p>Coefficients of inverter</p>
+          </mat-card-title>
+          <app-drive-coefficient-form></app-drive-coefficient-form>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="charts-content">
+      <div class="charts-content__charts-wrapper">
+        <mat-card class="charts-content__chart-item">
+          <mat-card-title>
+            <p>Frequency parameters</p>
+          </mat-card-title>
+          <app-drive-frequency-form></app-drive-frequency-form>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="charts-content">
+      <div class="charts-content__charts-wrapper">
+        <mat-card class="charts-content__chart-item">
+          <mat-card-title>
+            <p>Select type of feedback</p>
+          </mat-card-title>
+          <app-drive-feedback-form></app-drive-feedback-form>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="charts-content">
+      <div class="charts-content__charts-wrapper">
+        <mat-card class="charts-content__chart-item">
+          <mat-card-title>
+            <p>Select the type of speed control</p>
+          </mat-card-title>
+          <app-drive-speed-control-form></app-drive-speed-control-form>
+        </mat-card>
+      </div>
+    </div>
+  </mat-card-content>
+</app-layout>
