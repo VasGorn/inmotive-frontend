@@ -1,0 +1,84 @@
+<form class="form" [formGroup]="form" style="margin: 10px">
+  <mat-grid-list
+    [cols]="breakpointColumn"
+    rowHeight="75px"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Height of the stator groove (H1), mm</mat-label>
+        <input
+          matInput
+          placeholder="Height of the stator groove"
+          type="number"
+          formControlName="heightStatorGroove"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label
+          >Height of the wedge of the stator groove (GKL), mm</mat-label
+        >
+        <input
+          matInput
+          placeholder="Height of the wedge"
+          type="number"
+          formControlName="heightWedgeStator"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Slot width of the stator groove (MS), mm</mat-label>
+        <input
+          matInput
+          placeholder="Slot width"
+          type="number"
+          formControlName="slotWidth"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Width of the stator groove (GP), mm</mat-label>
+        <input
+          matInput
+          placeholder="Width of the stator groove"
+          type="number"
+          formControlName="widthStatorGroove"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Slot groove height (HS), mm</mat-label>
+        <input
+          matInput
+          placeholder="Slot groove height"
+          type="number"
+          formControlName="slotGrooveHeight"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <img
+    src="./assets/images/geometry_paza_statora.png"
+    alt="Geometry of stator slot"
+    class="image"
+  />
+
+  <div>
+    <button mat-raised-button color="primary" type="submit">Approve</button>
+  </div>
+</form>
