@@ -1,0 +1,88 @@
+<form class="form" [formGroup]="form" style="margin: 10px">
+  <mat-grid-list
+    [cols]="breakpointColumn"
+    rowHeight="75px"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Internal rotor diameter, mm</mat-label>
+        <input
+          matInput
+          placeholder="Rotor diameter"
+          type="number"
+          formControlName="rotorDiameter"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Length of the stator core, mm</mat-label>
+        <input
+          matInput
+          placeholder="Length of the stator"
+          type="number"
+          formControlName="statorLength"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Length of the front end of stator, mm</mat-label>
+        <input
+          matInput
+          placeholder="Length of the front end of stator"
+          type="number"
+          formControlName="statorFrontendLength"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Stator groove shape symptom</mat-label>
+        <input
+          matInput
+          placeholder="Stator groove shape symptom"
+          type="number"
+          formControlName="statorGrooveShape"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Bevel of stator grooves, mm</mat-label>
+        <input
+          matInput
+          placeholder="Bevel of stator grooves"
+          type="number"
+          formControlName="statorBevel"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Double-sided enclosure bus bar</mat-label>
+        <input
+          matInput
+          placeholder="Double-sided enclosure bus bar"
+          type="number"
+          formControlName="busBar"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div>
+    <button mat-raised-button color="primary" type="submit">Approve</button>
+  </div>
+</form>
