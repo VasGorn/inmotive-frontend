@@ -1,0 +1,40 @@
+<app-layout>
+  <mat-toolbar class="page-header" role="heading">
+    <h1>Motor</h1>
+  </mat-toolbar>
+
+  <mat-card-content class="typography-content">
+    <div class="typography-content__wrapper">
+      <mat-card class="typography-content__item-wrapper">
+        <mat-card-title>
+          <p>Setting of 3-phase induction motor</p>
+        </mat-card-title>
+        <div class="typography-content__headings">
+          <mat-tab-group>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">linear_scale</mat-icon>
+                Geometry
+              </ng-template>
+              <app-geometry-form></app-geometry-form>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">donut_large</mat-icon>
+                Stator slot
+              </ng-template>
+              <app-stator-slot-form></app-stator-slot-form>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">donut_small</mat-icon>
+                Rotor slot
+              </ng-template>
+              <app-rotor-slot-form></app-rotor-slot-form>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</app-layout>
