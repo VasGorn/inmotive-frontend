@@ -1,0 +1,14 @@
+<form class="form-project-select" [formGroup]="form">
+  <mat-form-field appearance="fill" style="width: 100%">
+    <!-- <mat-label>Speed control type</mat-label> -->
+    <mat-select formControlName="speedControleType">
+      <mat-option value="1"> U/f = const </mat-option>
+      <mat-option value="2"> U/sqrt(f) = const </mat-option>
+      <mat-option value="3"> U/f^2 = const </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button color="primary" type="submit">Approve</button>
+  </div>
+</form>
