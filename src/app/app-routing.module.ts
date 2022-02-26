@@ -4,6 +4,7 @@ import { AuthGuard } from "./pages/auth/guards/auth.guard";
 import { ProjectPageComponent } from "./pages/projects/containers/project-page/project-page.component";
 import { NotFoundComponent } from "./pages/not-found/not-found.component";
 import { DrivePageComponent } from "./pages/drive/containers/drive-page/drive-page.component";
+import { MotorPageComponent } from "./pages/motor/containers/motor-page/motor-page.component";
 
 const routes: Routes = [
   {
@@ -35,6 +36,14 @@ const routes: Routes = [
     component: DrivePageComponent,
     loadChildren: () =>
       import("./pages/drive/drive.module").then((m) => m.DriveModule),
+  },
+  {
+    path: "motor",
+    pathMatch: "full",
+    canActivate: [AuthGuard],
+    component: MotorPageComponent,
+    loadChildren: () =>
+      import("./pages/motor/motor.module").then((m) => m.MotorModule),
   },
   {
     path: "**",
