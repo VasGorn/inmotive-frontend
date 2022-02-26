@@ -17,9 +17,18 @@ import { MatIconModule } from "@angular/material/icon";
 import { MotorRoutingModule } from "./motor-routing.module";
 import { SharedModule } from "src/app/shared/shared.module";
 import { NotificationModule } from "../notification/notification.module";
+import { GeometryFormComponent } from "./components/geometry-form/geometry-form.component";
+import { StatorSlotFormComponent } from "./components/stator-slot-form/stator-slot-form.component";
+import { RotorSlotFormComponent } from "./components/rotor-slot-form/rotor-slot-form.component";
+import { MotorPageComponent } from "./containers/motor-page/motor-page.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    GeometryFormComponent,
+    StatorSlotFormComponent,
+    RotorSlotFormComponent,
+    MotorPageComponent,
+  ],
   imports: [
     CommonModule,
     MotorRoutingModule,
