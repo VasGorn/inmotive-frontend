@@ -1,0 +1,166 @@
+<form class="form" [formGroup]="form" style="margin: 10px">
+  <mat-grid-list
+    [cols]="breakpointColumn"
+    rowHeight="75px"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>DO</mat-label>
+        <input
+          matInput
+          placeholder="D0"
+          type="number"
+          formControlName="D0"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label
+          >Diameter of the first circle of the rotor groove (D1), mm</mat-label
+        >
+        <input
+          matInput
+          placeholder="Diameter of the first circle"
+          type="number"
+          formControlName="rotorDiameterFirstCircle"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label
+          >Diameter of the second circle of rotor groove (D2), mm</mat-label
+        >
+        <input
+          matInput
+          placeholder="Diameter of the second circle"
+          type="number"
+          formControlName="rotorDiameterSecondCircle"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label
+          >Distanse from the rotor surface to the center of the first circle
+          (A0), mm</mat-label
+        >
+        <input
+          matInput
+          placeholder="Distanse from surface and the first circle"
+          type="number"
+          formControlName="distanseSurfaceToFirstCircle"
+          step="0.1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>A1</mat-label>
+        <input
+          matInput
+          placeholder="A1"
+          type="number"
+          formControlName="A1"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Distance between center of circles (A2), mm</mat-label>
+        <input
+          matInput
+          placeholder="Distance between circles"
+          type="number"
+          formControlName="distanceBetweenTwoCircles"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>GR</mat-label>
+        <input
+          matInput
+          placeholder="GR"
+          type="number"
+          formControlName="GR"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Slot width of rotor groove (MR), mm</mat-label>
+        <input
+          matInput
+          placeholder="Slot width"
+          type="number"
+          formControlName="rotorSlotWidth"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile rowspam="1">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Jumper height above the groove (HF), mm</mat-label>
+        <input
+          matInput
+          placeholder="Jumber height"
+          type="number"
+          formControlName="rotorJumberHeight"
+          step="1"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-radio-group
+    formControlName="typeRotorSlot"
+    class="radio-group"
+    (change)="changeTypeOfRotorSlot($event)"
+  >
+    <mat-radio-button value="1">
+      <img
+        src="./assets/images/geometry_paza_rotora1.png"
+        alt="Geometry of rotor slot 1"
+      />
+    </mat-radio-button>
+    <mat-radio-button value="2">
+      <img
+        src="./assets/images/geometry_paza_rotora2.png"
+        alt="Geometry of rotor slot 2"
+      />
+    </mat-radio-button>
+    <mat-radio-button value="3">
+      <img
+        src="./assets/images/geometry_paza_rotora3.png"
+        alt="Geometry of rotor slot 3"
+      />
+    </mat-radio-button>
+    <mat-radio-button value="4">
+      <img
+        src="./assets/images/geometry_paza_rotora4.png"
+        alt="Geometry of rotor slot 4"
+      />
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <div>
+    <button mat-raised-button color="primary" type="submit">Approve</button>
+  </div>
+</form>
