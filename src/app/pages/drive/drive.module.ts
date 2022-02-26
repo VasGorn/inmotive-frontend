@@ -15,9 +15,22 @@ import { MatOptionModule } from "@angular/material/core";
 import { DriveRoutingModule } from "./drive-routing.module";
 import { SharedModule } from "src/app/shared/shared.module";
 import { NotificationModule } from "../notification/notification.module";
+import { DriveNominalFormComponent } from "./components/drive-nominal-form/drive-nominal-form.component";
+import { DriveCoefficientFormComponent } from "./components/drive-coefficient-form/drive-coefficient-form.component";
+import { DriveFrequencyFormComponent } from "./components/drive-frequency-form/drive-frequency-form.component";
+import { DriveFeedbackFormComponent } from "./components/drive-feedback-form/drive-feedback-form.component";
+import { DriveSpeedControlFormComponent } from "./components/drive-speed-control-form/drive-speed-control-form.component";
+import { DrivePageComponent } from "./containers/drive-page/drive-page.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DriveNominalFormComponent,
+    DriveCoefficientFormComponent,
+    DriveFrequencyFormComponent,
+    DriveFeedbackFormComponent,
+    DriveSpeedControlFormComponent,
+    DrivePageComponent,
+  ],
   imports: [
     CommonModule,
     DriveRoutingModule,
