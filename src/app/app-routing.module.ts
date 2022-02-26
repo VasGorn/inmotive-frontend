@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { AuthGuard } from "./pages/auth/guards/auth.guard";
 import { ProjectPageComponent } from "./pages/projects/containers/project-page/project-page.component";
 import { NotFoundComponent } from "./pages/not-found/not-found.component";
+import { DrivePageComponent } from "./pages/drive/containers/drive-page/drive-page.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,14 @@ const routes: Routes = [
     component: ProjectPageComponent,
     loadChildren: () =>
       import("./pages/projects/projects.module").then((m) => m.ProjectsModule),
+  },
+  {
+    path: "drive",
+    pathMatch: "full",
+    canActivate: [AuthGuard],
+    component: DrivePageComponent,
+    loadChildren: () =>
+      import("./pages/drive/drive.module").then((m) => m.DriveModule),
   },
   {
     path: "**",
