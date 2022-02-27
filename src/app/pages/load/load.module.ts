@@ -15,9 +15,12 @@ import { MatCardModule } from "@angular/material/card";
 import { LoadRoutingModule } from "./load-routing.module";
 import { SharedModule } from "src/app/shared/shared.module";
 import { NotificationModule } from "../notification/notification.module";
+import { LoadFormComponent } from "./components/load-form/load-form.component";
+import { LoadChartComponent } from "./components/load-chart/load-chart.component";
+import { LoadPageComponent } from "./containers/load-page/load-page.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [LoadFormComponent, LoadChartComponent, LoadPageComponent],
   imports: [
     CommonModule,
     LoadRoutingModule,
