@@ -18,6 +18,7 @@ import { NotFoundComponent } from "./pages/not-found/not-found.component";
 import { DriveModule } from "./pages/drive/drive.module";
 import { MotorModule } from "./pages/motor/motor.module";
 import { LoadModule } from "./pages/load/load.module";
+import { ResultsModule } from "./pages/results/results.module";
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
@@ -35,6 +36,7 @@ import { LoadModule } from "./pages/load/load.module";
     DriveModule,
     MotorModule,
     LoadModule,
+    ResultsModule,
   ],
   providers: [
     ProjectService,
