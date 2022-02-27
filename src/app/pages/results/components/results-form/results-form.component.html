@@ -1,0 +1,24 @@
+<form class="form" [formGroup]="form" style="margin: 10px">
+  <mat-grid-list
+    [cols]="breakpointColumn"
+    rowHeight="80px"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile colspam="2" rowspam="2">
+      <mat-form-field appearance="outline" class="form__input">
+        <mat-label>Type of mechanical load</mat-label>
+        <mat-select
+          formControlName="result"
+          (selectionChange)="onChange($event)"
+        >
+          <mat-option
+            *ngFor="let data of chartsData; let i = index"
+            [value]="i"
+          >
+            {{ data.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
