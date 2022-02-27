@@ -1,0 +1,31 @@
+<app-layout>
+  <mat-toolbar class="page-header" role="heading">
+    <h1>Load</h1>
+  </mat-toolbar>
+
+  <div class="charts-content">
+    <div class="charts-content__charts-wrapper">
+      <mat-card class="charts-content__chart-item">
+        <mat-card-title>
+          <p>Setting</p>
+        </mat-card-title>
+        <app-load-form
+          (loadChangedEvent)="loadChange($event)"
+          (acceptLoadEvent)="acceptLoad($event)"
+        >
+        </app-load-form>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="charts-content">
+    <div class="charts-content__charts-wrapper">
+      <mat-card class="charts-content__chart-item">
+        <mat-card-title>
+          <p>Torque Speed Characteristic</p>
+        </mat-card-title>
+        <app-load-chart [loadChartData$]="loadChartData$"></app-load-chart>
+      </mat-card>
+    </div>
+  </div>
+</app-layout>
