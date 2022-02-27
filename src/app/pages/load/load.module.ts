@@ -18,6 +18,7 @@ import { NotificationModule } from "../notification/notification.module";
 import { LoadFormComponent } from "./components/load-form/load-form.component";
 import { LoadChartComponent } from "./components/load-chart/load-chart.component";
 import { LoadPageComponent } from "./containers/load-page/load-page.component";
+import { LoadService } from "./services/load.service";
 
 @NgModule({
   declarations: [LoadFormComponent, LoadChartComponent, LoadPageComponent],
@@ -39,6 +40,6 @@ import { LoadPageComponent } from "./containers/load-page/load-page.component";
     SharedModule,
     NotificationModule,
   ],
-  providers: [],
+  providers: [LoadService],
 })
 export class LoadModule {}
