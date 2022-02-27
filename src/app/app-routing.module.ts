@@ -6,6 +6,7 @@ import { NotFoundComponent } from "./pages/not-found/not-found.component";
 import { DrivePageComponent } from "./pages/drive/containers/drive-page/drive-page.component";
 import { MotorPageComponent } from "./pages/motor/containers/motor-page/motor-page.component";
 import { LoadPageComponent } from "./pages/load/containers/load-page/load-page.component";
+import { ResultsPageComponent } from "./pages/results/containers/results-page/results-page.component";
 
 const routes: Routes = [
   {
@@ -53,6 +54,14 @@ const routes: Routes = [
     component: LoadPageComponent,
     loadChildren: () =>
       import("./pages/load/load.module").then((m) => m.LoadModule),
+  },
+  {
+    path: "results",
+    pathMatch: "full",
+    canActivate: [AuthGuard],
+    component: ResultsPageComponent,
+    loadChildren: () =>
+      import("./pages/results/results.module").then((m) => m.ResultsModule),
   },
   {
     path: "**",
