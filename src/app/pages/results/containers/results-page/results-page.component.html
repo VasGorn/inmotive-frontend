@@ -1,0 +1,56 @@
+<app-layout>
+  <mat-toolbar class="page-header" role="heading">
+    <h1>Results</h1>
+    <ng-container *ngIf="!isRunning">
+      <button mat-flat-button color="warn">Export to Excel</button>
+    </ng-container>
+  </mat-toolbar>
+
+  <ng-container *ngIf="isRunning">
+    <div class="charts-content">
+      <div class="charts-content__charts-wrapper">
+        <mat-card class="charts-content__chart-item">
+          <mat-card-title>
+            <p>Performing calculations...</p>
+          </mat-card-title>
+          <app-results-loading
+            class="center"
+            [value]="calculationProgress"
+          ></app-results-loading>
+        </mat-card>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="!isRunning">
+    <div class="charts-content">
+      <div class="charts-content__charts-wrapper">
+        <mat-card class="charts-content__chart-item">
+          <mat-card-title>
+            <p>Select characteristic</p>
+          </mat-card-title>
+          <app-results-form
+            [chartsData]="resultChartsData"
+            (chartIndexEvent)="chartChange($event)"
+          >
+          </app-results-form>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="charts-content">
+      <div class="charts-content__charts-wrapper">
+        <mat-card class="charts-content__chart-item">
+          <mat-card-title>
+            <p>Characteristic</p>
+          </mat-card-title>
+          <app-results-chart
+            [chartsData]="resultChartsData"
+            [chartIndex]="selectedChartIndex"
+          >
+          </app-results-chart>
+        </mat-card>
+      </div>
+    </div>
+  </ng-container>
+</app-layout>
