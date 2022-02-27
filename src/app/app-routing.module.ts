@@ -5,6 +5,7 @@ import { ProjectPageComponent } from "./pages/projects/containers/project-page/p
 import { NotFoundComponent } from "./pages/not-found/not-found.component";
 import { DrivePageComponent } from "./pages/drive/containers/drive-page/drive-page.component";
 import { MotorPageComponent } from "./pages/motor/containers/motor-page/motor-page.component";
+import { LoadPageComponent } from "./pages/load/containers/load-page/load-page.component";
 
 const routes: Routes = [
   {
@@ -44,6 +45,14 @@ const routes: Routes = [
     component: MotorPageComponent,
     loadChildren: () =>
       import("./pages/motor/motor.module").then((m) => m.MotorModule),
+  },
+  {
+    path: "load",
+    pathMatch: "full",
+    canActivate: [AuthGuard],
+    component: LoadPageComponent,
+    loadChildren: () =>
+      import("./pages/load/load.module").then((m) => m.LoadModule),
   },
   {
     path: "**",
